@@ -1,0 +1,52 @@
+mport java.util.Scanner;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
+ class main{
+    
+    int array[]=new int[20];
+    Scanner sc=new Scanner(System.in);
+  
+    
+
+    int key=sc.nextInt();
+    int search(int key)
+    {
+        System.out.println("enter the size of the array");
+        int n=sc.nextInt();
+        System.out.println("enter the array ");
+        for(int i=0;i<n;i++)
+    {
+        array[i]=sc.nextInt();
+    }
+        int low=0;
+        int high= n-1;
+        while(low<=high)
+        {
+            int mid=(low+high)/2;
+            if(array[mid]==key)
+            {
+                return mid;
+            }
+            else if(array[mid]<key)
+            {
+                low=mid+1;
+            }
+            else{
+                high=mid-1;
+            }
+        }
+        return -1;
+    }
+}
+
+class binarysearch
+{
+    public static void main(String args[])
+    {
+        main obj=new main();
+        obj.search( 5 );
+        
+
+    }
+}
