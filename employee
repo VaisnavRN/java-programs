@@ -1,0 +1,41 @@
+import java.util.*;
+import java.util.jar.Attributes.Name;
+import java.util.zip.Adler32;
+
+class employ{
+    
+    String name;
+    int age;
+    int phnno;
+    String address;
+    int salary;
+}
+
+class officer extends employ {
+   void deatils(int age, int phno ,int  salary)
+   {
+     Scanner sc=new Scanner(System.in);
+     name=sc.nextLine();
+     System.out.println("Name: "+name);
+     System.out.println("enter the dept :");
+     String dept=sc.nextLine();
+     System.out.println("enter the specialization: ");
+     String specialization=sc.nextLine();
+     System.out.println("Name: "+name);
+     System.out.println("dept: "+dept);
+     System.out.println("age: "+age);
+     System.out.println( "phn no: "+phnno);
+     System.out.println( "salary :"+salary);
+     System.out.println( "specialization" +specialization);
+    
+
+   }
+
+}
+public class employee{
+    public static void main(String[]args)
+    {
+        officer off=new officer();
+        off.details(19,98760567,40000);
+    }
+}
