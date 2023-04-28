@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class frequency {
+    
+    public static void main(String[] args){
+        char str[];
+        int count=0;
+        int i,length;
+        System.out.println("enter the string");
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        length=s.length();
+        str=s.toCharArray();
+
+        for(i=0;i<length;i++)
+        {
+            System.out.print(str[i]);
+            
+        }
+        System.out.println("");
+
+        System.out.println("enter the character whose freq is required");
+        String a=sc.nextLine();
+        char b=a.charAt(0);
+        for(i=0;i<length;i++)
+        {
+            if(str[i]==b)
+            {
+                count++;
+            }
+        }
+        System.out.println("the frequence of the entered character is "+count);
+    }
+}
