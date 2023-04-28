@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class oddexception extends Exception
+{}
+class evenexception extends Exception
+{}
+public class excepionhandling {
+    public static void oddeven(int a) throws oddexception,evenexception
+    {
+        if(a%2==0)
+        {
+        throw new evenexception();
+        }
+        else
+        {
+            throw new oddexception();
+        }
+
+    }
+    public static void main(String[]args)
+    {
+        try{
+        int a;
+        System.out.println("enter the number : ");
+        Scanner sc=new Scanner(System.in);
+        a=sc.nextInt();
+        oddeven(a);
+        }
+        catch(evenexception e)
+        {
+            System.out.println("even exception occured");
+        }
+        catch(oddexception o)
+        {
+            System.out.println("odd exception  occured");
+        }
+        finally{
+            System.out.println("exceptions handled successfully");
+        }
+    }
+}
